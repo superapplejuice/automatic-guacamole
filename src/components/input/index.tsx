@@ -1,6 +1,6 @@
 import { InputProps } from './types.ts';
 
-const Input = <InputValue extends readonly string[]>({
+const Input = <InputValue,>({
   label,
   value,
   onChange,

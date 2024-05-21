@@ -5,4 +5,4 @@ export type InputProps<InputValue> = {
   value: React.InputHTMLAttributes<InputValue>['value'];
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   type?: React.HTMLInputTypeAttribute;
-};
+}
