@@ -8,7 +8,7 @@ const UserForm = () => {
       lastName: '',
       email: '',
     },
-    onSubmit: (values) => console.log(values),
+    onSubmit: (values) => alert(values),
     validation: (values) => {
       const errors = {
         firstName: '',
