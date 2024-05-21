@@ -1,9 +1,9 @@
 export enum ItemCategory {
-  Tops,
-  Bottoms,
-  Headdress,
-  Outerwear,
-  InnerWear
+  Tops = 'Tops',
+  Bottoms = 'Bottoms',
+  Headdress = 'Headdress',
+  Outerwear = 'Outerwear',
+  InnerWear = 'Inner Wear',
 }
 
 export type ItemFormType = {

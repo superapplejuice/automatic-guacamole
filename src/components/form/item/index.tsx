@@ -1,6 +1,7 @@
 import useFormReducer from '../../../hooks/useFormReducer';
-import { ItemFormType } from './types.ts';
+import { ItemCategory, ItemFormType } from './types.ts';
 import Input from '../../input';
+import Select from '../../select';
 
 const ItemForm = () => {
   const { values, handleSubmit, handleSetValue } = useFormReducer<ItemFormType>({
@@ -25,9 +26,9 @@ const ItemForm = () => {
         value={values.description}
         onChange={e => handleSetValue('description', e.target.value)}
       />
-      <Input
+      <Select
         label="Category"
-        value={values.category}
+        options={Object.entries(ItemCategory).map(([key, label]) => ({ value: key, label }))}
         onChange={e => handleSetValue('category', e.target.value)}
       />
       <Input
