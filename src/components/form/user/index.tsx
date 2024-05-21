@@ -1,5 +1,6 @@
 import useFormReducer from '../../../hooks/useFormReducer';
 import { UserFormType } from './types.ts';
+import Input from '../../input';
 
 const UserForm = () => {
   const { values, handleSetValue, handleSubmit } = useFormReducer<UserFormType>({
@@ -26,18 +27,21 @@ const UserForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label>First name</label>
-        <input value={values.firstName} onChange={(e) => handleSetValue('firstName', e.target.value)}/>
-      </div>
-      <div>
-        <label>Last name</label>
-        <input value={values.firstName} onChange={(e) => handleSetValue('lastName', e.target.value)}/>
-      </div>
-      <div>
-        <label>Email</label>
-        <input value={values.firstName} onChange={(e) => handleSetValue('email', e.target.value)}/>
-      </div>
+      <Input
+        label="First name"
+        value={values.firstName}
+        onChange={e => handleSetValue('firstName', e.target.value)}
+      />
+      <Input
+        label="Last name"
+        value={values.lastName}
+        onChange={e => handleSetValue('lastName', e.target.value)}
+      />
+      <Input
+        label="Email"
+        value={values.email}
+        onChange={e => handleSetValue('email', e.target.value)}
+      />
       <button type="submit">Submit</button>
     </form>
   );
